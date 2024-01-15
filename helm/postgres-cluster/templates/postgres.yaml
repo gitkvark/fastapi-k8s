@@ -14,7 +14,7 @@ spec:
   enableReplicaLoadBalancer: false
   volume:
     size: "10Gi"
-    storageClass: "ebs-sc"
+    storageClass: {{ .Values.storageClass }}
   users:
     fastapi_traefik: # User fastapi_traefik has superuser and create DB privileges
       - superuser # Super user privilege

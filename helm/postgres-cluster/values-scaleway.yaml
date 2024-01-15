@@ -1,0 +1,3 @@
+# Namespace
+namespace: "prod"
+storageClass: "scw-bssd" # The default for EKS is ebs-sc. scw-bssd is for Scaleway

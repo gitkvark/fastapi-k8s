@@ -1,0 +1,15 @@
+# values.yaml
+# Special settings for traefik running in EKS
+# https://traefik.io/blog/eks-clusters-with-traefik-proxy-as-the-ingress-controller/
+---
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+ingressClass:
+  enabled: true
+  isDefaultClass: true
+  fallbackApiVersion: v1
+ingressRoute:
+  dashboard:
+    enabled: false
+globalArguments:
+  - "--api.insecure=true"
